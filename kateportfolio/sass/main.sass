@@ -1,0 +1,295 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	
+
+.site-header
+	min-height: 800px
+	width: 100%
+
+	.header-composition
+		margin-top: 200px
+		text-align: center
+
+		.h1
+			font-size: 100px
+			text-transform: uppercase
+			color: #ffffff
+			text-align: center
+		
+		.h2
+			font-size: 45px
+			text-transform: uppercase
+			color: #ffffff
+		
+		svg
+			font-size: 35px
+			color: #ffffff
+			margin: 10px
+			&:hover
+				color: $accent
+				transition: ease .8s
+
+.top-mnu
+	height: 90px
+	background-color: rgba(255, 255, 255, .9)
+	width: 100%
+	border-bottom: 3px solid rgba(127,127, 127, .5)
+
+.top-mnu-items
+	margin-top: 20px
+	font-size: 20px
+	text-transform: uppercase
+	color: #fff
+	ul
+		position: relative
+		float: right
+		li
+			list-style-type: none
+			display: inline-block
+			margin: 10px
+			a
+				text-decoration: none
+				color: #c5c5c5
+				&:hover
+					color: $accent
+					transition: ease .8s
+
+.logo
+	img
+		height: 50px
+		display: inline-block
+		margin-top: 20px
+		float: left
+		
+section
+	.h2
+		font-size: 35px
+		text-transform: uppercase
+		color: $accent
+		margin-top: 80px
+		margin-bottom: 80px
+
+	.s-about
+		display: block
+		margin-bottom: 50px
+
+	.about-photo
+		img
+			border-radius: 50%
+	
+	.about-descr
+		padding: 15px
+		p
+			font-size: 20px
+
+	.h3
+		text-transform: uppercase
+		font-size: 20px
+		margin-top: 50px
+		margin-bottom: 35px
+	
+.s-about-btn
+	margin-top: 50px
+	text-align: center
+
+
+.button
+    display: inline-block
+    border: none
+    color: #fff
+    text-decoration: none
+    background-color: $accent
+    padding: 15px 45px
+    font-size: 13px
+    text-transform: uppercase
+    font-weight: 600
+    letter-spacing: 3px
+    border-radius: 2px
+    text-align: center
+    position: relative
+    outline: none
+    transition: background-color .1s ease
+    &::after
+        transition: background-color .2s ease
+        position: absolute
+        content: ''
+        height: 4px
+        bottom: 0
+        width: 100%
+        background-color: darken($accent, 50%)
+        opacity: .18
+        border-bottom-left-radius: 2px
+        border-bottom-right-radius: 2px
+        left: 0
+    &:focus, &:hover
+        text-decoration: none
+        color: #fff
+    &:hover
+        background-color: lighten($accent, 5%)
+        &::after
+            opacity: .22
+    &:active
+        background-color: darken($accent, 5%)
+        &::after
+            opacity: .32
+	
+#portfolio
+	background-color: #333
+	margin-top: 80px
+	p
+		margin-bottom: 60px
+		color: #fff
+	.h3
+		color: #fff
+
+	.portfolio-carousel-image
+		display: block
+		height: 600px
+		background-size: cover
+		background-position: center
+		margin-left: 10px
+
+#blog
+	background-color: #f0f0f0
+	.s-blog-item
+		height: auto
+		border-bottom: 3px solid #e4e4e4
+		background-color: #fff
+		margin-bottom: 35px
+		display: block
+		width: 100%
+
+		&-content
+			padding: 25px
+			&-date
+				text-transform: uppercase
+				color: #8c8c8c
+			.h3
+				margin-top: 40px
+				margin-bottom: 25px
+				color: #5c5c5c
+			p
+				color: #8c8c8c
+				font-size: 14px
+	.s-blog-item-img
+		img
+			width: 100%
+			height: auto
+
+#contacts
+	min-height: 645px
+	.form-group
+		display: block
+		margin-bottom: 25px
+	input,
+	textarea
+		display: block
+		width: 100%
+		margin-top: 5px
+		line-height: 40px
+		text-indent: 12px
+		font-size: 12px
+		border: none
+		background-color: rgba(255, 255, 255, .1)
+	input:focus,
+	textarea:focus
+		display: block
+		width: 100%
+		margin-top: 5px
+		line-height: 40px
+		text-indent: 12px
+		font-size: 12px
+		color: $accent
+		border: none
+		background-color: rgba(255, 255, 255, .4)
+ 
+
+.s-contacts-form-button
+			//display: inline-block
+			border: none
+			color: #fff
+			text-decoration: none
+			background-color: $accent
+			padding: 15px 45px
+			font-size: 13px
+			text-transform: uppercase
+			font-weight: 600
+			letter-spacing: 3px
+			border-radius: 2px
+			text-align: center
+			position: relative
+			outline: none
+			transition: background-color .1s ease
+			&::after
+				transition: background-color .2s ease
+				position: absolute
+				content: ''
+				height: 4px
+				bottom: 0
+				width: 100%
+				background-color: darken($accent, 50%)
+				opacity: .18
+				border-bottom-left-radius: 2px
+				border-bottom-right-radius: 2px
+				left: 0
+			&:focus, &:hover
+				text-decoration: none
+				color: #fff
+			&:hover
+				background-color: lighten($accent, 5%)
+				&::after
+					opacity: .22
+			&:active
+				background-color: darken($accent, 5%)
+				&::after
+					opacity: .32
+
+
+
+.s-contacts-details-list
+	padding-left: 0
+	li
+		list-style-type: none
+		margin-top: 15px
+		
+
+.s-contacts-details
+	h3	
+		margin-top: 0
+		color: #fff	
+	p,ul,li
+		color: #555555
+
+.footer
+	min-height: 195px
+	.social
+		margin-top: 75px
+		width: 100%
+		text-align: center
+	svg
+		font-size: 35px
+		color: #555
+		margin: 10px
+		&:hover
+			color: $accent
+			transition: ease .8s
+	@import "media" // Always at the end
